@@ -1,6 +1,1 @@
-com.neotys.dynatrace.events.DynatraceEventAction
-com.neotys.dynatrace.monitoring.DynatraceMonitoringAction
-com.neotys.dynatrace.configuration.DynatraceConfigurationAction
-com.neotys.dynatrace.sanityCheck.DynatraceSanityCheckAction
-com.neotys.dynatrace.anomalieDetection.create.DynatraceAnomalieDetectionAction
-com.neotys.dynatrace.anomalieDetection.delete.DynatraceDeleteAnomalieDetectionAction
+com.neotys.azure.monitoring.AzureMonitoringAction
