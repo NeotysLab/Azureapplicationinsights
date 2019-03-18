@@ -14,7 +14,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public final class AzureMonitoringAction implements Action {
-	private static final String BUNDLE_NAME = "com.neotys.dynatrace.monitoring.bundle";
+	private static final String BUNDLE_NAME = "com.neotys.azure.monitoring.bundle";
 	private static final String DISPLAY_NAME = ResourceBundle.getBundle(BUNDLE_NAME, Locale.getDefault()).getString("displayName");
 	private static final String DISPLAY_PATH = ResourceBundle.getBundle(BUNDLE_NAME, Locale.getDefault()).getString("displayPath");
 
