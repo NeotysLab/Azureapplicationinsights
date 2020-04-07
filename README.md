@@ -6,9 +6,9 @@
 
 These Advanced Actions allows you to integrate with [Azure ](https://dev.applicationinsights.io) in order to correlate data from one tool to another.
 
-This bundle provides inbound and an outbound integration:
+This bundle provides inbound integration:
   
-* **DynatraceMonitoring**   
+* **AzureMonitoring**   
     * **Azure Application Insights &rarr; NeoLoad**: Retrieves infrastructure and service metrics from Azure Applicaiton Insights and inserts them in NeoLoad External Data so that
       you can correlate NeoLoad and Azure Application Insights metrics within NeoLoad.
 
@@ -20,14 +20,14 @@ This bundle provides inbound and an outbound integration:
 | License  | [BSD Simplified](https://www.neotys.com/documents/legal/bsd-neotys.txt) |
 | NeoLoad  | 6.+ (Enterprise or Professional Edition w/ Integration & Advanced Usage and NeoLoad Web option required)|
 | Bundled in NeoLoad | No
-| Download Binaries | <ul><li>[latest release](https://github.com/Neotys-Labs/Dynatrace/releases/latest) is only compatible with NeoLoad from version 6.7</li><li> Use this [release](https://github.com/Neotys-Labs/Dynatrace/releases/tag/Neotys-Labs%2FDynatrace.git-2.0.10) for previous NeoLoad versions</li></ul>|
+| Download Binaries | <ul><li>[latest release](https://github.com/NeotysLab/Azureapplicationinsights/releases/latest) is only compatible with NeoLoad from version 7.0</li>|
 
 ## Installation
 
-1. Download the [latest release](https://github.com/Neotys-Labs/Dynatrace/releases/latest) for NeoLoad from version 6.7 or this [release](https://github.com/Neotys-Labs/Dynatrace/releases/tag/Neotys-Labs%2FDynatrace.git-2.0.10) for previous NeoLoad versions.
+1. Download the [latest release](https://github.com/NeotysLab/Azureapplicationinsights/releases/latest) for NeoLoad from version 7.0 
 1. Read the NeoLoad documentation to see [How to install a custom Advanced Action](https://www.neotys.com/documents/doc/neoload/latest/en/html/#25928.htm).
 
-<p align="center"><img src="/screenshots/dynatrace_advanced_action.png" alt="New Relic Advanced Action" /></p>
+<p align="center"><img src="/screenshots/advanced.png" alt="Azure INisghts Advanced Action" /></p>
 
 ## NeoLoad Set-up
 
@@ -35,18 +35,15 @@ Once installed, how to use in a given NeoLoad project:
 
 1. Create a “Azure Insights” User Path.
 1. Insert "AzureMonitoring" in the ‘Actions’ block.
-   <p align="center"><img src="/screenshots/dynatrace_user_path.png" alt="Dynatrace User Path" /></p>
+   <p align="center"><img src="/screenshots/vu.png" alt="Azure User Path" /></p>
+1. Configure "AzureMonitoring" by specifying your application ID and API KEY
+   <p align="center"><img src="/screenshots/vu_settings.png" alt="Azure User Path" /></p>
 1. Select the **Actions** container and set a pacing duration of 30 seconds.
-   <p align="center"><img src="/screenshots/actions_container_pacing.png" alt="Action's Pacing" /></p>
-1. Select the **Actions** container and set the "Reset user session and emulate new browser between each iteration" runtime parameters to "No".
-   <p align="center"><img src="/screenshots/actions_container_reset_iteration_no.png" alt="Action's Runtime parameters" /></p>
 1. Create a "PopulationAzure" Population that contains 100% of "AzureMonitoring" User Path.
-   <p align="center"><img src="/screenshots/dynatrace_population.png" alt="Dynatrace Population" /></p>
+   <p align="center"><img src="/screenshots/population.png" alt="Azure Population" /></p>
 1. In the **Runtime** section, select your scenario, select the "PopulationAzure" population and define a constant load of 1 user for the full duration of the load test.
-   <p align="center"><img src="/screenshots/dynatrace_load_variation_policy.png" alt="Load Variation Policy" /></p>
+   <p align="center"><img src="/screenshots/scenario.png" alt="Load Variation Policy" /></p>
 1. Do not use multiple load generators. Good practice should be to keep only the local one.
-1. Verify to have a license with "Integration & Advanced Usage".
-   <p align="center"><img src="/screenshots/license_integration_and_advanced_usage.png" alt="License with Integration & Advanced Usage" /></p>
 
 ## Azure Insights Set-up
 

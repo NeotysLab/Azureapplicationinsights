@@ -1,0 +1,17 @@
+<custom-action actionType="AzureMonitoringAction" isHit="false"
+    name="azuremonitoring" uid="c7ae793a-d340-40af-8599-86087e78ca2a">
+    <description>The AzureMonitoring Action will get metrics from Azure Insights and send NeoLoad computed ones.
+The list is available at: https://github.com/Neotys-Labs/Azure
+
+Possible parameters are:&#xd;
+- applicationId (required): Application ID Monitored by Azure INsights Default value is "Application ID".&#xd;
+- AzureApiKey (required): Azure API key Default value is "Azure API key.".&#xd;
+- AzureManagedHostname (optional): Azure Insights custom Hostname Default value is "Azure Insights custom Hostname".&#xd;
+- dataExchangeApiUrl (optional): Where the DataExchange server is located. Optional, by default it is: http://${NL-ControllerIp}:7400/DataExchange/v1/Service.svc/&#xd;
+- dataExchangeApiKey (optional): Identification key specified in NeoLoad.&#xd;
+- proxyName (optional): The NeoLoad proxy name to access Dynatrace.&#xd;
+- traceMode (optional)&#xd;
+</description>
+    <custom-action-parameter name="applicationId" type="TEXT" value="Application ID"/>
+    <custom-action-parameter name="AzureApiKey" type="TEXT" value="Azure API key."/>
+</custom-action>
