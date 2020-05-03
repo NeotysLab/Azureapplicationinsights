@@ -73,6 +73,7 @@ public final class AzureMonitoringActionEngine implements ActionEngine {
         }
 
         try {
+            sampleResult.sampleStart();
 
             boolean traceMode = optionalTraceMode.isPresent() && Boolean.valueOf(optionalTraceMode.get());
 
@@ -81,7 +82,7 @@ public final class AzureMonitoringActionEngine implements ActionEngine {
             azureIntegration = new AzureGetTimeSeries(context, azureApiKey, applicationID,  dataExchangeAPIClient, proxyName, AzureHostname,  traceMode);
             azureIntegration.processAzureData();
 
-            //first call send event to dynatrace
+
             sampleResult.sampleEnd();
         } catch (Exception e) {
             return ResultFactory.newErrorResult(context, STATUS_CODE_TECHNICAL_ERROR, "Error encountered :", e);
